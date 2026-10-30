@@ -1,0 +1,32 @@
+{
+  "GAPPredictor": {
+    "repo": "Xiaobin-Rong/gap-urgenet",
+    "revision": "f1916ff86b83777e2c3e7ecae8752a04b8d88d41",
+    "filename": "Predictor.pt",
+    "bytes": 88469158,
+    "sha256": "1e58c270c12ab953e4df32a34e4b580f780d016bee9bf5580684d6c982f77866",
+    "config": {
+      "fft_len": 0.032,
+      "hop_len": 0.016,
+      "win_len": 0.032,
+      "n_srcs": 1,
+      "n_imics": 1,
+      "n_layers": 10,
+      "lstm_hidden_units": 200,
+      "attn_n_head": 8,
+      "attn_qk_output_channel": 4,
+      "emb_dim": 96,
+      "emb_ks": 4,
+      "emb_hs": 1,
+      "activation": "prelu",
+      "eps": 1e-05
+    }
+  },
+  "MossFormer2": {
+    "repo": "alibabasglab/MossFormer2_SE_48K",
+    "revision": "eff8c97925c8bec812af707814b3e5d777fd4503",
+    "filename": "last_best_checkpoint.pt",
+    "bytes": 221552019,
+    "sha256": "03692b9f773bbd6bb43b9c5a41f96b1e28affd66e13796b7bec66ad3d8b227c6"
+  }
+}

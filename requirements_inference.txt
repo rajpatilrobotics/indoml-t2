@@ -1,0 +1,10 @@
+# Linux x86_64, Python 3.11. Install CUDA torch separately as documented.
+numpy==1.26.4
+scipy==1.13.1
+soundfile==0.12.1
+transformers==4.57.6
+huggingface-hub==0.36.0
+sentencepiece==0.2.1
+yamlargparse==1.31.1
+librosa==0.10.2.post1
+jiwer==4.0.0

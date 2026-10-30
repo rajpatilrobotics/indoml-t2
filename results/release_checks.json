@@ -1,0 +1,14 @@
+{
+  "checkpoint_strict_load": "PASS",
+  "checkpoint_parameters": 22087196,
+  "focused_tests_passed": 14,
+  "python_syntax": "PASS",
+  "private_path_and_credential_pattern_scan": "PASS",
+  "report_pages": 3,
+  "report_visual_review": "PASS",
+  "limitations": [
+    "No complete GPU inference or retraining of consolidated release wrapper during packaging",
+    "Historical official scoring result, not a new scored run"
+  ],
+  "historical_scores_evidence": "results/scores.txt"
+}

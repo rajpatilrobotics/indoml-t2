@@ -1,0 +1,44 @@
+{
+  "candidate": "GAPPolar90",
+  "checkpoint": "checkpoints/polar90.pt",
+  "sha256": "4629c2d75492644265c42cc93780770039d562cc9288fb1ee15520e0ceaca825",
+  "bytes": 88476296,
+  "upstream": {
+    "repo": "Xiaobin-Rong/gap-urgenet",
+    "revision": "f1916ff86b83777e2c3e7ecae8752a04b8d88d41",
+    "filename": "Predictor.pt",
+    "bytes": 88469158,
+    "sha256": "1e58c270c12ab953e4df32a34e4b580f780d016bee9bf5580684d6c982f77866",
+    "config": {
+      "fft_len": 0.032,
+      "hop_len": 0.016,
+      "win_len": 0.032,
+      "n_srcs": 1,
+      "n_imics": 1,
+      "n_layers": 10,
+      "lstm_hidden_units": 200,
+      "attn_n_head": 8,
+      "attn_qk_output_channel": 4,
+      "emb_dim": 96,
+      "emb_ks": 4,
+      "emb_hs": 1,
+      "activation": "prelu",
+      "eps": 1e-05
+    }
+  },
+  "lineage": [
+    "GAPPredictor",
+    "GAPAdapt1 step 1000",
+    "GAPNoise1 hard step 800",
+    "GAPBalance1 token step 600"
+  ],
+  "inference": [
+    "Context20",
+    "PCM16",
+    "GAPShiftMean (128-sample left shift, 50:50 mean)",
+    "PCM16",
+    "GAPPolar90 (magnitude 0.9, phase 0.9)",
+    "PCM16",
+    "unchanged SraVaani"
+  ]
+}

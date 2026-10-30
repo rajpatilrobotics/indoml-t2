@@ -1,0 +1,101 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,amssymb,booktabs,url,balance}
+\usepackage[hidelinks]{hyperref}
+\title{GAPPolar90: Recognition-Aware Adaptation and Spectral Projection for Multilingual Noise Event Removal}
+\author{\IEEEauthorblockN{Raj Patil}\IEEEauthorblockA{Team Innovators (solo participant)\\Datathon@IndoML 2026, Track 2: Removal}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We describe the Innovators submission to Datathon@IndoML 2026 Track 2. Starting from the public GAP-URGENet Predictor, we adapt an enhancement network using external multilingual speech and noise, then balance reconstruction gradients against a frozen recognition teacher. At inference, a fixed 20-second context policy, a two-pass temporal-shift average, and a conservative complex-spectrum projection are applied uniformly to every clip. The mandated SraVaani recognizer transcribes the exact final PCM16 waveform without decoder or text modifications. The final submission obtains 14.4178 dB synthetic SI-SDR and a 2.8135-percentage-point pooled word-error-rate reduction, yielding an official Combined score of 17.2313. This is 1.7491 points above our pretrained Predictor submission. The official 100-clip recognition audit passes with zero mismatches. We release the trained checkpoint, training source, inference code, and reproducibility records, and distinguish reused development measurements from hidden-test results.
+\end{abstract}
+\begin{IEEEkeywords}
+speech enhancement, multilingual recognition, frozen teacher, noise removal, spectral projection
+\end{IEEEkeywords}
+
+\section{Task and Evaluation}
+Track 2 requires removal of noise events while retaining intelligible multilingual speech. The competition evaluates signal fidelity on synthetic mixtures and recognition quality on both synthetic and natural recordings. Its Combined score is
+\begin{equation}
+C=\operatorname{SI\text{-}SDR}_{\mathrm{synthetic}}+100(W_{\mathrm{noisy}}-W_{\mathrm{enh}}),
+\end{equation}
+where $W$ is pooled word error rate (WER), not an unweighted average of per-utterance WERs. Our validation set contains 2,501 clips: 695 synthetic and 1,806 natural. Phase 2 hidden evaluation contains 3,178 clips: 1,099 synthetic and 2,079 natural. Hidden clean references and reference transcripts were unavailable to our training pipeline.
+
+We used development measurements to make incremental decisions, including a 400-clip screen followed by full validation and reporting the remaining 2,101 clips. These partitions were reused across experiments. Consequently, the remaining partition is a regression check, not a fresh statistical holdout; validation scores are not forecasts of leaderboard scores. The final submission is \textbf{982179}, displayed under Raj Patil, with team name \textbf{Innovators}. Its leaderboard position was seventh when checked on 30 October 2026, before the organizers' novelty/report review.
+
+\section{Training Data and Preprocessing}
+\subsection{Competition and external data}
+Competition Vaani audio was used for validation, test inference, and overlap exclusion, \emph{not} for supervised enhancement training. We used external clean speech from AI4Bharat Rasa~\cite{rasa}, pinned to revision \texttt{632f55c7}, and noise from Microsoft MS-SNSD~\cite{snsd}, pinned to \texttt{fe61c4ba}. Full revision identifiers and file hashes are released with the source manifests.
+
+Rasa training speech came from Hindi, Bengali, Telugu and Kannada; Marathi and Tamil were reserved for external development. The initial adaptation accepted 2,366 training and 200 development speech recordings, with 35 training and 11 development noise recordings. The subsequent noise/balanced stages used 3,422 training and 480 development speech recordings, with 78 training and 27 development noise recordings. Source IDs, encoded hashes and decoded PCM hashes separated training/development sources; noise categories were split between them. Speaker metadata did not establish speaker-disjointness. Exact ID/hash checks against competition manifests cannot rule out re-encoded overlap or overlap in upstream pretraining.
+
+The later external development set comprises 240 selection and 240 confirmation examples. Each partition has 100 hard-noise, 100 moderate-noise and 40 clean examples. Later experiments reused these external sets. Rasa is distributed under CC BY 4.0; original source attribution and access conditions are retained. We distribute neither competition audio nor external recordings/transcripts.
+
+\subsection{Mixture generation}
+External speech is quality-filtered, resampled to 16 kHz, serialized consistently, and randomly cropped to four seconds. Clean/noise crops have their DC offsets removed. The noise is scaled to the requested signal-to-noise ratio (SNR); both noisy input and clean target receive the same gain, targeting noisy RMS levels uniformly between $-30$ and $-12$ dB with a common peak cap of 0.95. This common scaling preserves the target relation. The initial recipe uses SNR uniformly from $-5$ to 20 dB and 20\% clean-preservation examples.
+
+The harder curriculum uses 40\% examples at $-15$ to 0 dB SNR, 40\% at 0 to 20 dB, and 20\% clean examples. Two distinct external noise recordings are RMS-normalized and combined, with the second at a relative level uniformly between $-10$ and 0 dB. Mixtures are generated deterministically from pinned source records and per-example random seeds. There is no competition-noise lookup, target subtraction, source-label routing or unchanged-output bypass.
+
+\section{Proposed Method}
+\subsection{Pretrained network and adaptation}
+We initialize from the \texttt{Predictor.pt} component of public GAP-URGENet~\cite{gap}, revision \texttt{f1916ff8}. We use its TFGridNet-family architecture~\cite{tfgrid}: ten blocks, 96-dimensional embeddings, LSTM hidden size 200 and eight attention heads, with 32-ms analysis windows and 16-ms hop at 16 kHz. The architecture is inherited, not our novelty. The final enhancement checkpoint has approximately 22 million parameters.
+
+The selected lineage is GAPPredictor $\rightarrow$ GAPAdapt1 (1,000 updates) $\rightarrow$ GAPNoise1 hard arm (800 updates) $\rightarrow$ GAPBalance1 token arm (600 updates). Each stage uses FP32 AdamW, learning rate $10^{-5}$, $\beta=(0.8,0.99)$, weight decay 0.01, four accumulated microbatches and gradient-norm clipping at 3. Non-reentrant block checkpointing reduces training memory. Optimizer/RNG state is saved every 25 updates. The initial reconstruction objective combines compressed complex-STFT error, compressed magnitude error and a waveform log-ratio term. For $P=\operatorname{STFT}(\hat{s})$, $S=\operatorname{STFT}(s)$, define $Q(Z)=Z\max(|Z|,10^{-8})^{-0.7}$. The spectral terms weight complex squared magnitude error by 30 and magnitude-compressed ($0.3$ power) squared error by 70; the waveform term is $-2\log_{10}(\|\hat{s}\|_2/\|\hat{s}-s\|_2)$ with numerical floors. This training loss is distinct from the official metric.
+
+\subsection{Frozen recognition supervision}
+The balance stage adds 0.1 times a smooth, capped negative centered SI-SDR term, with a 30-dB ceiling. It also uses SraVaani-1.0~\cite{sravaani} as a \emph{frozen} teacher. Detached clean greedy token-duration-transducer paths supply target token and duration distributions. The enhanced waveform is compared at up to 12 emission and 12 blank positions, using KL divergence with temperature 2 and duration weight 0.25. These are teacher-generated soft targets, not human competition transcripts. This sparse clean-path surrogate is not full RNNT/TDT sequence likelihood. Training-only numerical/backward handling does not replace the official inference decoder.
+
+Let $g_r$ and $g_k$ be reconstruction and recognition gradients over enhancement parameters. A one-sided PCGrad-inspired~\cite{pcgrad} rule removes a conflicting recognition component:
+\begin{align}
+\tilde{g}_k&=g_k-\frac{\min(g_r^T g_k,0)}{\|g_r\|_2^2}g_r,\\
+g&=g_r+\min\!\left(1,\frac{0.5\|g_r\|_2}{\|\tilde{g}_k\|_2}\right)\tilde{g}_k.
+\end{align}
+Numerical floors and finite-gradient checks are enforced. The recognition contribution is therefore aligned with, and bounded relative to, reconstruction before clipping. This is a constraint on raw gradients, not a guarantee about AdamW's preconditioned update or generalization. We claim a task-specific application of existing gradient-conflict ideas, not invention of PCGrad.
+
+\subsection{Fixed inference recipe}
+\textbf{Context20.} The saved balanced model processes clips in 20-second windows, with 18-second stride and one-second retained-context margins. Short clips are zero-padded to the 256-sample model hop (minimum 1,024 samples); long clips retain contiguous central regions without duplicated samples. Original lengths are restored exactly.
+
+\textbf{ShiftMean.} Let $f_{20}$ denote this decoder and $\mathcal{Q}$ PCM16 serialization. First obtain $b=\mathcal{Q}(f_{20}(x))$. Pad the original input by 128 samples on the left, enhance it, and undo the shift, obtaining $u$. The next waveform is $y=\mathcal{Q}(0.5b+0.5u)$. Both passes use the original noisy input and the same network. Preserving intermediate quantization matches the submitted implementation.
+
+\textbf{Polar90.} With a 512-point periodic-Hann STFT and 128-sample hop, let $X=\operatorname{STFT}(x)$ and $Y=\operatorname{STFT}(y)$. We form
+\begin{equation}
+Z=|Y|^{0.9}|X|^{0.1}\exp\{j[\angle Y-0.1\angle(Y\overline X)]\}.
+\end{equation}
+Principal phase differences and geometric magnitude interpolation avoid division by near-zero noisy bins. Zero magnitudes remain zero; no artificial noise floor is added. Overlap-normalized inverse STFT reconstructs the original sample count. The fixed strengths were chosen on validation; they do not vary by filename, language, source type or transcript.
+
+Finally, every enhanced waveform is serialized as mono 16-kHz PCM16. Unchanged mandated SraVaani, revision \texttt{f5dd5358}, transcribes these exact files using its official \texttt{transcribe} defaults. There is no alternative recognizer, transcript correction or manual text editing. Packaging verifies all audio/transcript hashes and exact IDs before writing root-level WAVs and \texttt{transcripts.jsonl}.
+
+\section{Results and Conclusion}
+Table~\ref{tab:results} reports sequential development outcomes and separately obtained official scores. Changes are cumulative, so the table is not a controlled ablation study. GAPBalance1 alone was not submitted directly. ShiftMean was explicitly explored despite a small validation WER regression; subsequent hidden scores, rather than retrospective validation-gate claims, establish its official improvement.
+\begin{table}[t]
+\caption{Sequential results; validation is not a hidden-score estimate.}
+\label{tab:results}\centering
+\begin{tabular}{lrr}\toprule
+Candidate & Validation $C$ & Official $C$\\\midrule
+GAPPredictor &19.0517&15.4822\\
+GAPAdapt1 &19.5011&16.2547\\
+GAPNoise1 &19.8223&16.6068\\
+GAPBalance1 &19.9536&---\\
+GAPContext20 &20.0819&17.0198\\
+GAPShiftMean &20.3529&17.1901\\
+\textbf{GAPPolar90} &\textbf{20.4934}&\textbf{17.2313}\\\bottomrule
+\end{tabular}
+\end{table}
+
+Polar90's official synthetic SI-SDR is 14.417813 dB, pooled WER reduction 2.813475 percentage points, synthetic reduction 8.323597 points and natural reduction 0.216354 points. Against ShiftMean, SI-SDR decreases by 0.073794 dB while pooled recognition gain increases by 0.114963 points, yielding a net 0.041169 Combined improvement. The official audit checks 100 hidden clips with zero mismatches. These are organizer-produced measurements, not independently recomputed hidden-reference metrics.
+
+The system improves our pretrained Predictor result by 1.7491 Combined points, but natural-recording recognition gains remain small. Reused development sets, corpus mismatch and limited training are important constraints. Neither the architecture nor the upstream enhancement/ASR pretraining is novel. Our contribution is the integrated, reproducible recipe: external hard-noise adaptation, reconstruction-priority frozen recognition supervision, temporal shift averaging and conservative polar projection. The evidence supports incremental gains for this task, not a general superiority claim.
+
+\subsection{Reproduction and compute}
+Experiments ran on Kaggle with two Tesla T4 GPUs (16 GB each), Python 3.11, PyTorch 2.6.0 and CUDA 12.4. FP32, activation checkpointing and resumable state were used. The final Polar90 processing run took 852.3 seconds \emph{using cached ShiftMean audio}; this excludes the preceding 17,573-second ShiftMean enhancement/ASR run and is not an end-to-end timing claim.
+
+The public repository, \url{https://github.com/rajpatilrobotics/indoml-t2}, supplies separate training/inference requirements, source pins, the 88.5-MB final checkpoint and a WAV-to-submission entry point. Its checkpoint SHA-256 begins \texttt{4629c2d754926442}; the complete hash is in the model manifest. The submitted ZIP hash begins \texttt{968bb55046e91f7e}. Local release checks verify strict state loading, PCM/geometry equivalence and packaging invariants. Full GPU retraining and all-test inference of the consolidated release driver were not repeated during packaging; the original staged runs produced the audited submission. Bitwise identity across GPU/software environments is not claimed.
+
+\balance
+\begin{thebibliography}{9}
+\bibitem{rasa} AI4Bharat, ``Rasa dataset,'' \url{https://huggingface.co/datasets/ai4bharat/Rasa}, pinned revision 632f55c7, 2026.
+\bibitem{snsd} Microsoft, ``Microsoft Scalable Noisy Speech Dataset (MS-SNSD),'' \url{https://github.com/microsoft/MS-SNSD}.
+\bibitem{gap} X. Rong et al., ``GAP-URGENet,'' model and code, \url{https://huggingface.co/Xiaobin-Rong/gap-urgenet}, arXiv:2604.01832, 2026.
+\bibitem{tfgrid} Z.-Q. Wang et al., ``TF-GridNet: Integrating Full- and Sub-Band Modeling for Speech Separation,'' \emph{IEEE/ACM Trans. Audio, Speech, Lang. Process.}, 2023.
+\bibitem{sravaani} ARTPARK-IISc, ``SraVaani-1.0,'' \url{https://huggingface.co/ARTPARK-IISc/SraVaani-1.0}, pinned revision f5dd5358, 2026.
+\bibitem{pcgrad} T. Yu et al., ``Gradient Surgery for Multi-Task Learning,'' \emph{NeurIPS}, 2020.
+\end{thebibliography}
+\end{document}

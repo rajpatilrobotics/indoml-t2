@@ -1,0 +1,1203 @@
+{
+  "rasa": {
+    "repo": "ai4bharat/Rasa",
+    "revision": "632f55c7ac590219d41cd7adffce5b440e4604f5",
+    "license": "CC BY 4.0",
+    "shards": [
+      {
+        "path": "Hindi/train-00000-of-00025.parquet",
+        "language": "Hindi",
+        "split": "train",
+        "bytes": 618876683,
+        "sha256": "4a05e4f5916eb2f24fcc0d1f741a6440871915852d262b65fd934ed73a6a9097",
+        "limit": 900
+      },
+      {
+        "path": "Hindi/train-00024-of-00025.parquet",
+        "language": "Hindi",
+        "split": "train",
+        "bytes": 983479062,
+        "sha256": "708487d6b9b690ff58ae51f3b732ea78573072e0f1e4cb7150a4e81c470ab48f",
+        "limit": 900
+      },
+      {
+        "path": "Bengali/train-00000-of-00055.parquet",
+        "language": "Bengali",
+        "split": "train",
+        "bytes": 286180015,
+        "sha256": "17b26a8447d6c0264e2ff87aac058b6b2f9ef05aba52ccb79fe8b33daf1fad8d",
+        "limit": 900
+      },
+      {
+        "path": "Bengali/train-00054-of-00055.parquet",
+        "language": "Bengali",
+        "split": "train",
+        "bytes": 310966095,
+        "sha256": "8e55dc902f3c63ef2ba8d6ee0e6ec2d0097643c1377b2c12f623dbfca2fe47cc",
+        "limit": 900
+      },
+      {
+        "path": "Telugu/train-00000-of-00056.parquet",
+        "language": "Telugu",
+        "split": "train",
+        "bytes": 279757226,
+        "sha256": "6bc0f07891eec1910eddfb254ddc2f20b4635600f3d701ac9ed114a49a233ebc",
+        "limit": 900
+      },
+      {
+        "path": "Telugu/train-00055-of-00056.parquet",
+        "language": "Telugu",
+        "split": "train",
+        "bytes": 274453997,
+        "sha256": "f9128da3c1a1bd851ab2a7e63a445cd46da44b3e20327ff9ce9900e5f329a980",
+        "limit": 900
+      },
+      {
+        "path": "Kannada/train-00000-of-00059.parquet",
+        "language": "Kannada",
+        "split": "train",
+        "bytes": 267539769,
+        "sha256": "12128cb26c0a7359b7fe815e0372ee6a838e19ba06e5f78a0e3b09e41778a200",
+        "limit": 900
+      },
+      {
+        "path": "Kannada/train-00058-of-00059.parquet",
+        "language": "Kannada",
+        "split": "train",
+        "bytes": 276097376,
+        "sha256": "aa515229ec7238b03ffa28ba44e20027d73a5025a025c58645f334de03305a62",
+        "limit": 900
+      },
+      {
+        "path": "Marathi/train-00000-of-00057.parquet",
+        "language": "Marathi",
+        "split": "dev",
+        "bytes": 285346601,
+        "sha256": "4d326cd9a2b85eb115ea45cc23374bb6dbce4cf038c14174d3430e3f90e33e36",
+        "limit": 240
+      },
+      {
+        "path": "Tamil/train-00000-of-00067.parquet",
+        "language": "Tamil",
+        "split": "dev",
+        "bytes": 281777846,
+        "sha256": "eafbb50e65dd2930ddfba1c51e93d11304334423530cd0726d1e67082bef4180",
+        "limit": 240
+      },
+      {
+        "path": "Marathi/train-00001-of-00057.parquet",
+        "bytes": 280455167,
+        "language": "Marathi",
+        "split": "dev",
+        "limit": 240,
+        "role": "Fallback for fresh dev quota; skipped when earlier shard suffices",
+        "git_lfs_pointer_sha1": "6ad943b0e81b4af3996c7bcdf0c65861bdce163b",
+        "verification": "Size and Git LFS pointer object SHA1 reconstructed from downloaded SHA256; object pinned in immutable revision. Public API masks gated LFS SHA256."
+      },
+      {
+        "path": "Tamil/train-00001-of-00067.parquet",
+        "bytes": 284715373,
+        "language": "Tamil",
+        "split": "dev",
+        "limit": 240,
+        "role": "Fallback for fresh dev quota; skipped when earlier shard suffices",
+        "git_lfs_pointer_sha1": "4dd9a54783b6c8801bd0d10e442185022cd2eb35",
+        "verification": "Size and Git LFS pointer object SHA1 reconstructed from downloaded SHA256; object pinned in immutable revision. Public API masks gated LFS SHA256."
+      }
+    ]
+  },
+  "noise": {
+    "repo": "microsoft/MS-SNSD",
+    "revision": "fe61c4ba0d9ac8dd7e23d719cc79f8947e1dc742",
+    "files": [
+      {
+        "path": "noise_test/AirConditioner_1.wav",
+        "bytes": 750400,
+        "sha256": "3fe55d7035d7ef2599841738f818dc4463f5ef983eb4b5fefeee153d8caa2110",
+        "git_blob_sha1": "55e799699ac13da8373c85ada7dc71af7c7b6615",
+        "pcm_sha256": "ce18416598f09f2b0959824cab0f7af1200365eb39a7b4d180e80011c881d351",
+        "frames": 375178,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_10.wav",
+        "bytes": 878064,
+        "sha256": "887116f251e07c146580c5a79150f4d90e3979a2e1af3001d847b717cbcdba61",
+        "git_blob_sha1": "aa67bb47ef3f93ed30c3735a4bd991a6cc754be1",
+        "pcm_sha256": "78c62a279cc890ce2346c3e4683e7ae66c381de84d3112dd42ce5a0e8aad84de",
+        "frames": 439010,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_2.wav",
+        "bytes": 723800,
+        "sha256": "82f0e0b3ff00871d5f81466478a953a1164221762779177147750cc3a99c3a7a",
+        "git_blob_sha1": "51de35b10c970ef01d609e76250ea67c4536d6f7",
+        "pcm_sha256": "2efe7edb557ece1cb5125cbd46e0d5277b2d758edb0a62728a541aefe7446a9a",
+        "frames": 361878,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_3.wav",
+        "bytes": 1049648,
+        "sha256": "7559203c45e0c6a20b118b6c1ff298cf273f5964d6b7743de7c735bedaad0bfb",
+        "git_blob_sha1": "501c77822ac9821b71b1133d4188e1b15666874b",
+        "pcm_sha256": "6584f8bf34961e980d759d30b91df16c1c9c33eb5ec3ebecbf6d4adb5476e5d7",
+        "frames": 524802,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_4.wav",
+        "bytes": 1128214,
+        "sha256": "ad2a1858a4ef3760e5686608222bc24d1db9001eb2d134edab80e5da52cac03c",
+        "git_blob_sha1": "b39d7d8ab0ac7a2428a1861171eb94437eb8a7a2",
+        "pcm_sha256": "afe909a47dfe6698d8a1e5ecb08c72a44d9cb922f4ce28e430061d99094ff8e8",
+        "frames": 564085,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_5.wav",
+        "bytes": 962536,
+        "sha256": "ff626f1803d9384850e5955359c22d6633670bcad4f940ba96272ca30f1841f1",
+        "git_blob_sha1": "787ac2eec011e57e7d6a659307c1149d84fe5c6b",
+        "pcm_sha256": "ee8dd5fbbf0cfae781280418b90bacaf4c85fe2592e7d8f2c1a5230f41bd6aa3",
+        "frames": 481246,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_6.wav",
+        "bytes": 766056,
+        "sha256": "ae49625618bf7f74c9816a968a96706ef61dc78946a3b93a3b6c0f91c1083167",
+        "git_blob_sha1": "ba70b3f864ffbc09e2dbe0d578a6fc34c0b95415",
+        "pcm_sha256": "31fec9e87f7a3ae5523891985ca8a1482d9dabea6a67eb3e44dcd8d1a46497a3",
+        "frames": 383006,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_7.wav",
+        "bytes": 742944,
+        "sha256": "43ec90446f153613e74bf4d79c3ee30829f71877b950955b8d5c5639637377d1",
+        "git_blob_sha1": "b2271705fd71a71dffa104db0c565c625cc3579c",
+        "pcm_sha256": "aadcd5ff9ddf477a9829919c779a7450c816587ea3c04d1d134fc852176dc7f1",
+        "frames": 371450,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_8.wav",
+        "bytes": 1727228,
+        "sha256": "76071a68b84d8f14845ab5599b3f5d88d9ba55dc93f1498dbf361138f44a4c9b",
+        "git_blob_sha1": "90c84ec10022d7524e047d67aff2485df860e9ba",
+        "pcm_sha256": "5849e7edd89789ae808744869c0b34e45efc063b1140699616587fe767c9dc14",
+        "frames": 863592,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/AirConditioner_9.wav",
+        "bytes": 1345890,
+        "sha256": "b05010c0aa066d2b06aafd69e4dec179e88dc1f34ccdb0910071eb62a7283f83",
+        "git_blob_sha1": "18e7ddbc1e230b66a2036acd5f4dd1b03101777e",
+        "pcm_sha256": "48475d9302c806c5ba02bc346c4411aaa70124a5d822620f9c30b2502b91fe63",
+        "frames": 672923,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/CopyMachine_1.wav",
+        "bytes": 1592644,
+        "sha256": "43ce2b5e660c0d68dce14aed21050b9cd37b717430144f966ec9abdfada4ad61",
+        "git_blob_sha1": "05dc5062d24f5e30f69c177df947a8f508104ec7",
+        "pcm_sha256": "62d99a4356e13925a5bb3cedfa50dd7b7e95f966b6c4ba3f339b3b1f1fb60813",
+        "frames": 796300,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/CopyMachine_2.wav",
+        "bytes": 1837300,
+        "sha256": "88a4919bb646461250fb891f368168d08be90956c818f3901a9f2b4a2736115f",
+        "git_blob_sha1": "17444231cf4b36a835b8785da80a3d7ba3a307ce",
+        "pcm_sha256": "c3243108bde2bd1b47b4b8f7fb9a52dfaea035fe1981c09800ccf9a2bab904fd",
+        "frames": 918628,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/Munching_1.wav",
+        "bytes": 768088,
+        "sha256": "eb3f8ee05242e283617ba17025f595cf500c26b29410a8ee0d773ba8fae9a70e",
+        "git_blob_sha1": "4e33f92a9cf4bf80512d32146d6acd4e0627dbda",
+        "pcm_sha256": "3eafc60ce4b5f279d5fe997a2482041983eb6865134ab1cca521edf675e33486",
+        "frames": 384022,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_2.wav",
+        "bytes": 1017770,
+        "sha256": "253b85127d812b35b4dca55b7173e9363f1c7b7f3a11275d804591a6db24c23d",
+        "git_blob_sha1": "f33fe08320b17ea404787181d39761521ba8487c",
+        "pcm_sha256": "1211883a8125e8a499c8209657385d64a2faf1b30f8d6227d836be796bdeeb86",
+        "frames": 508863,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_3.wav",
+        "bytes": 3224044,
+        "sha256": "a99a7c632d6c5e7473b50e907eb3f0884dc90869d2cc9eed06658d3afd702da1",
+        "git_blob_sha1": "7c9e2d9cb0f4f3ecf53f7262649ca7450595b9de",
+        "pcm_sha256": "1f68923b351f25844240bf1339b842bb85b7ee5b7434dac0f8846dffd79a1cb1",
+        "frames": 1612000,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_4.wav",
+        "bytes": 796778,
+        "sha256": "47756c6f52822315a1d030d109c71eba4cb0c542f758628f42a24d91129ff56e",
+        "git_blob_sha1": "bf9acae9e082d19befbdbac92bed8309d9de4284",
+        "pcm_sha256": "883a2fefb6c1b2c85c51a5ea80cb99856ba2e176180c58102725e709d6a2904e",
+        "frames": 398367,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_5.wav",
+        "bytes": 2087840,
+        "sha256": "e0ea36d8bcae461096dae6f571203a60819f928b1756c3a5c7393071ca85fa33",
+        "git_blob_sha1": "76dd36f9283ec38e1ca8c073c4501d71cc67c396",
+        "pcm_sha256": "5625fe3d250125a6608051f8a7eee1575566ff710576eb57a61ed2a62c88e425",
+        "frames": 1043898,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_6.wav",
+        "bytes": 682180,
+        "sha256": "d22af551b65f687ef8a75eba051f4037acb07566a024cf11ba3fa90f6d9bb24b",
+        "git_blob_sha1": "3a0b1412df57ddf5f3ebadeba04130f9f5ad38e8",
+        "pcm_sha256": "29574dc70a2aa149d719edaa1e0f4a17a9457aba7eca05de5eff4c002f193b23",
+        "frames": 341068,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_7.wav",
+        "bytes": 1142016,
+        "sha256": "0953138525cf08d0d3cf6947ca0a98426155d798fcec71e1a72121ee3c7cb9c8",
+        "git_blob_sha1": "dc3ac33517390b8a169780ecaf5645a1dfdc71ce",
+        "pcm_sha256": "1c1c349088303903985eb1201878cc2a3ae2130c5f32c1bdb083c88c1085f0d8",
+        "frames": 570986,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/Munching_8.wav",
+        "bytes": 1201200,
+        "sha256": "b1d1f06f52457d78677c1b08ee89f8a467b1f1d0594b3fcbb7949b685a6df484",
+        "git_blob_sha1": "e0e8053d6343bacc27fe242989948b7e812db717",
+        "pcm_sha256": "0d96d1e3ab95f07307acd6df36a9163e8bfdf29f937f768315791569ebeafda4",
+        "frames": 600578,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_1.wav",
+        "bytes": 741836,
+        "sha256": "302b35fb3bea6a4b97bbbfb21a56e9b87a04922c8dbfd41fb9bf4d7be1dcf455",
+        "git_blob_sha1": "814699f506e0e9c3f498f1ab30a11fe6c8ed9c87",
+        "pcm_sha256": "1efeda6f7262679ba662da769038dff05ea46d1bb8093be3adb1ba7414067ac9",
+        "frames": 370896,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_2.wav",
+        "bytes": 708572,
+        "sha256": "20f99662d9261a61da28030e919f14e03a09eb045e8353f3cde28a6e690afb6d",
+        "git_blob_sha1": "b6bff0f558b8f7cdc44c764d822f9921946e330c",
+        "pcm_sha256": "d2c5fabad42978166be8e81876f7876217655aa9a31c873af1d113d8b2e97f4b",
+        "frames": 354264,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_3.wav",
+        "bytes": 778508,
+        "sha256": "73ecfa3d43c553debbf3eb2296575f704e05a325f527a274b894f92f45f98ea3",
+        "git_blob_sha1": "685d5423f799677cbe71ca5796aa621a7eafcfb3",
+        "pcm_sha256": "9f8f9d1ab1ef2830111aad1e25492c8842a14966f2b9f6d4a5416f2cf7756f09",
+        "frames": 389232,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_4.wav",
+        "bytes": 1044076,
+        "sha256": "92b67dd2e88a0f4b13de2368ab695f9a526c6bf2cd2130a83fcf078e00ac5a20",
+        "git_blob_sha1": "1b370bc71b33b6ae3ba6cc8483b5b6448b517064",
+        "pcm_sha256": "099ea224f2ca8cfdcfc603e85cd7b4df03fe7b3470b0c7bbcd114e613417a20a",
+        "frames": 522016,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_5.wav",
+        "bytes": 1093164,
+        "sha256": "610156f93eccee040eea265ea069fc3efbe392aeb203cc925cb6877e2f3449dd",
+        "git_blob_sha1": "0d3ff63868f6c42e48f6fd4948a1d54cfcdc4412",
+        "pcm_sha256": "794f07f057cebe542f515340cde061b37cc3408498b0d7ae1eb693938374a6c9",
+        "frames": 546560,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_6.wav",
+        "bytes": 699020,
+        "sha256": "2fee8065befc0c1c3c2f0263da062fc96bdf35d11fae2d3e7814d09f72802a87",
+        "git_blob_sha1": "7ebe07cc530cf1dc1ead16b1693892b0d9497c9c",
+        "pcm_sha256": "7a5bc48d1917fe4f5cefe240d8a376627f016767fdd4aa9bacda99732c32d339",
+        "frames": 349488,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_7.wav",
+        "bytes": 913196,
+        "sha256": "6b54899582cba066b7fcc8a2d08a67b548657bb693ce54e469db0e943b6ec5ae",
+        "git_blob_sha1": "2caf717654d2d4f91a1734de609e075fa052ccf0",
+        "pcm_sha256": "394201fb7fb60a92db0af5b0a4879f87cc7add9710721461f42267937935adf8",
+        "frames": 456576,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/ShuttingDoor_8.wav",
+        "bytes": 704044,
+        "sha256": "823df440f2fc8f80344cdf26508a2328833a787f93cf740f17938756b286f1a7",
+        "git_blob_sha1": "47007c238d9997480b89216c3c833cf1508703fd",
+        "pcm_sha256": "53ddbb4931e0a0b6c1b1548a558341587c7321566dc4ddd1191cce743d9356a4",
+        "frames": 352000,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/Typing_1.wav",
+        "bytes": 6792768,
+        "sha256": "47980660888977fb45e5cdfd4a14d6585139e90267c0e61a01eeadb4a5891222",
+        "git_blob_sha1": "b7f9c3d54ab3baebbb2ee6a9ea77228832a2bb3d",
+        "pcm_sha256": "07bc6dbaab83246f71732acbd21b1b35830967101d096d0c64b2475a1415c300",
+        "frames": 3396362,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/Typing_2.wav",
+        "bytes": 6725000,
+        "sha256": "d4907dea2f84cc04a440ad3f57374428c5b6b54a931017eda474b5e56bcb822c",
+        "git_blob_sha1": "8b081422b3be2d180a2816dd88125d049efc86c7",
+        "pcm_sha256": "738c8f7de6b45facfc136c4dd689f412fa26bd54071c2575f36a985e48555ed3",
+        "frames": 3362478,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_test/VacuumCleaner_1.wav",
+        "bytes": 1109382,
+        "sha256": "594c10d5db0f809b695f90199443b81b799fa1b06c09efcac02c1ebff62fda80",
+        "git_blob_sha1": "c8e78447f58290e637297dc0efd7d7b56bb7bf29",
+        "pcm_sha256": "3b204cfdd67e02001626f5dfde27210a4ba455859cf6562e9dff2162664ec1ed",
+        "frames": 554669,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_1.wav",
+        "bytes": 670106,
+        "sha256": "1e0b42643b88e4fc646b5e8861bf4bc053679ba242c9d3bcbc949fc7897c40b9",
+        "git_blob_sha1": "d65dbdcf2f3cd4212f858ac2043638df49985370",
+        "pcm_sha256": "cf938753a3c5315f332fe06a80bef7f356b018f3096e7656a94377d660f44c21",
+        "frames": 335031,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_10.wav",
+        "bytes": 2375010,
+        "sha256": "6efdb9ff324b31cdc5d4cc74c5e756de6245290e375c290f00728da49df8b65b",
+        "git_blob_sha1": "da26d614a892645507d4c5674da93b0b6d68768d",
+        "pcm_sha256": "b9eb85a7e67b9f7c1c3a996020ad8087cba6bfc4fc651e7232853c6f19949e86",
+        "frames": 1187483,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_3.wav",
+        "bytes": 982700,
+        "sha256": "c311be2ef596b0077d5550fc605da0a1f1808ed9729a8feb81f745960bf68980",
+        "git_blob_sha1": "344efd5cca9394c53a5cae4e7fcd028cf847a567",
+        "pcm_sha256": "5eef41f7e13ef843155e4dae8c3ccb94ee0fa06d7f415ae5dc9ba9822b2d652b",
+        "frames": 491328,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_4.wav",
+        "bytes": 894806,
+        "sha256": "55fdca74bf4c23939dd80614c263973f36e8cb1695e6fc101471b3ec2fc77263",
+        "git_blob_sha1": "d15ce7d4bbc1ebcadbb6003c276c419916de8f14",
+        "pcm_sha256": "a1a0ca92f6067ec921d7d65fff0e4a3510de9c3b8d792b779e3d9a6e087827db",
+        "frames": 447381,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_5.wav",
+        "bytes": 947586,
+        "sha256": "a4d02b3016791b37946a0bd8412ea268155b1c9f1a55c9159b58b6c71b629519",
+        "git_blob_sha1": "265fd207d3664fbbabcf86b14ce4fc6790be1415",
+        "pcm_sha256": "0ab1737dc0012a901024729da076f6e0ddf27aba0ea578e54214946453181b41",
+        "frames": 473771,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_6.wav",
+        "bytes": 651404,
+        "sha256": "ff8520dbc905d7aa22f52e9aa9744577119d82f2be9d8ed39a9600d803eafd87",
+        "git_blob_sha1": "cfd9214fde367592f0e1fb234db6fce0e8b04929",
+        "pcm_sha256": "1adebd0ae80e73edb098b59a10953671dfcbf8eb5f9b6993cb9d194463e0f3be",
+        "frames": 325680,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_7.wav",
+        "bytes": 4512044,
+        "sha256": "d331447ce5bd6c01f30fc140b036110f9e5efaa246622412969079e34b66e841",
+        "git_blob_sha1": "e8d3b514c13dcac1a2302c46e438c2b9e4af134c",
+        "pcm_sha256": "be30907b2f8c3ff582b775e2a10c004787489e8ca0f2e230fda037aa5323d480",
+        "frames": 2256000,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_8.wav",
+        "bytes": 1050804,
+        "sha256": "34b0772ef2e9403b77b25e3a21d28e52dcacfd2ad90809ab6ea31bb8f250bfeb",
+        "git_blob_sha1": "5a8eb384c542d015a49425421c6cf766efc20c2b",
+        "pcm_sha256": "c7aabc2999acd917a68e7d26c66fdf1f4003c94a31a2810a341603bedd0af8e8",
+        "frames": 525380,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/AirConditioner_9.wav",
+        "bytes": 3843898,
+        "sha256": "3f75a8004871873fadfb423333e791610e3ab3f6a264057e7c9f855b05dc291a",
+        "git_blob_sha1": "af7d633b765f8a01152328c97873d725cb67d44e",
+        "pcm_sha256": "88b01b2ac0d485d185efa175a0fe40465298c576a96926008783ff610f58a75c",
+        "frames": 1921927,
+        "category": "AirConditioner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_1.wav",
+        "bytes": 1000200,
+        "sha256": "790f7dd838d0eb9fe8c3288db95cd3fabca3d632708699d78cc1b0c8449e4fc9",
+        "git_blob_sha1": "470c3d424499cc18ac724ae69c2c8681491c5858",
+        "pcm_sha256": "9d820233ebb83c7426ed4e8ef7497735d24b16c937c0492ff95ac99f7f22dd7e",
+        "frames": 500078,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_10.wav",
+        "bytes": 9125888,
+        "sha256": "21e48c709cf9a3b836a706b04da0c9fc8bebcf38e314635ed96631d7622d041a",
+        "git_blob_sha1": "ed1474f426e1f1bc3bf6f49412512de5641a28d8",
+        "pcm_sha256": "8711253c18e6b80d9474230735dc730780ed7150120150d4f00042b3f4487f9f",
+        "frames": 4562922,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_2.wav",
+        "bytes": 779316,
+        "sha256": "5c32527f70ee2d50205a70fb86cf31a91ee2e1874b7037943c0bf191cc9a20da",
+        "git_blob_sha1": "bd9f3c818556f4a41ba76a8d83ebb3aafc24b5c0",
+        "pcm_sha256": "3f2cb64676169cbc58abc07fbb71b12a2630e6e7f8b4af977ccf3f954e6963e3",
+        "frames": 389636,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_3.wav",
+        "bytes": 662876,
+        "sha256": "3b625ab14180cf481bf3de3cc8f90d51fd2e309eadb5c3f28b5f75792dbbbbbd",
+        "git_blob_sha1": "58f6ea5eafaa149db023121d4eef53b5aee7adbd",
+        "pcm_sha256": "107433ca1c0e993802c0e2b2980fe01e2366afaa6cf16401c5345e07ebaf5af2",
+        "frames": 331416,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_4.wav",
+        "bytes": 867348,
+        "sha256": "8f6ce4ec82b1ccfec3eaef4506bc7069d8286e4beea383d3bdd231684df9cf6d",
+        "git_blob_sha1": "0b6acc55e509eb93e01151e89bf1ada940cfa816",
+        "pcm_sha256": "a4c2e484d17b4c3a9758c016d506f352edcf0ed9569476874c1c7009d0577e70",
+        "frames": 433652,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_5.wav",
+        "bytes": 698576,
+        "sha256": "379910edbf11e02da50bf9c3308a590bb2d4e2bec2f2780c9262bdc35ca9bd2e",
+        "git_blob_sha1": "d42c46bea86ea6da40a20fb636134e977ccb34b8",
+        "pcm_sha256": "d0f80bd95d97e3e7e9dc908ca3b6259f79bf90aae33226e0b7442f0701aa49e8",
+        "frames": 349266,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_6.wav",
+        "bytes": 1007828,
+        "sha256": "b3d74263ad710b33057938a5a5169166c41349dd8ef41014e073b2087d17e0a2",
+        "git_blob_sha1": "b2efe40eb552644c5384a251f395b24aa588e4e1",
+        "pcm_sha256": "6027c41902de2a2939986872ab08b463a5f4f102434fc61cbeb0e8c856b78203",
+        "frames": 503892,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_7.wav",
+        "bytes": 1471034,
+        "sha256": "a222ae048fac620a7e2b337b812cedd1da695e0b7240a65ed94f6b4c07fddfad",
+        "git_blob_sha1": "feaa5e56dbda74c81a28b7a9b26d55f620003c93",
+        "pcm_sha256": "8ba9405a44a1bc2c058ae65982befac6591e853b754901e40ad3f9e4247bfe0b",
+        "frames": 735495,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/CopyMachine_8.wav",
+        "bytes": 9125888,
+        "sha256": "46b9997167246b7b352f03095d6edd5117031d405249c92a1dbcb618d328f0a9",
+        "git_blob_sha1": "0397697f266d86ee2016baf79dc02910696e85aa",
+        "pcm_sha256": "9afa5590404eca7726e977e009c8d94afdb776f6a2454e78d80692f45359af34",
+        "frames": 4562922,
+        "category": "CopyMachine",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Munching_1.wav",
+        "bytes": 1080852,
+        "sha256": "0dd7da4346ce45eb6ef8bab33e7008ab132aaedaedcd6a9b64615f0cc46d8606",
+        "git_blob_sha1": "32d909e9e37148b7b6390bf277362f092bb056e4",
+        "pcm_sha256": "db9c066b4a7051f831281aca6d3f07bc1e2202f7c08d3b49465080cd896e7758",
+        "frames": 540404,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_10.wav",
+        "bytes": 924580,
+        "sha256": "b6a999f7f9327a8e9fd513124d82d918be281624e719d11f3f0499fa75b80757",
+        "git_blob_sha1": "002ccbd20c242e0b060659f566b6ac6a083688dc",
+        "pcm_sha256": "fbc77f60a01eb31bfe4b0c354fa80eb73327b1251a905583b2f76355ca9ce509",
+        "frames": 462268,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_2.wav",
+        "bytes": 903080,
+        "sha256": "397b3a543f12da5befce4f0ee9f8f471ecb7da253b394b3607468749022e61af",
+        "git_blob_sha1": "d043577efccb4480683c9e308592f7503e6788bc",
+        "pcm_sha256": "e306b6b04a90a9c7f5c750631e674244c28e5af5a7b74250a4ae0d76b42095e7",
+        "frames": 451518,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_3.wav",
+        "bytes": 1761534,
+        "sha256": "31e8021dd4f38dc743bef1ef7565606bfabaa4dae6528ff9e0662abafab65da8",
+        "git_blob_sha1": "8c3ac72d0484f612d0e77ece4855ce532c24ac20",
+        "pcm_sha256": "6c29f62699500ec36a8962f58cfd615d9fd28ff64f7a20abc25aa1dcf5ddcddc",
+        "frames": 880745,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_4.wav",
+        "bytes": 640580,
+        "sha256": "ce2c213516a790f846e861b5d2c8079fb3e86f8da1dbdc9a3586d4fd54838c9a",
+        "git_blob_sha1": "a08ee1f2968298ca52127ed1100de37ece7b4e4b",
+        "pcm_sha256": "29034157aa95cf05ac1f13b08a543a76eb3b8f543c6c4d16f7e98141bd36617b",
+        "frames": 320268,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_6.wav",
+        "bytes": 925924,
+        "sha256": "60495d2c0d8e0a0e3239268bcede177aa18683be768e720be7e7599dab4cfb8c",
+        "git_blob_sha1": "ffde5f2c907120668a82fdb37b80716cc2d4119f",
+        "pcm_sha256": "64a495745d8b810d571b5f7a8f5555ae7af1de68e402ae6ac63b9ba69cc1b304",
+        "frames": 462940,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_7.wav",
+        "bytes": 1280044,
+        "sha256": "ef3b1aa7a733e99daaea56e005ac62835df16ee35cac709433282dc56dc124e2",
+        "git_blob_sha1": "cffd7eaacacdd827a7d62ec8fc58932d9fe06989",
+        "pcm_sha256": "e7d54e3cafb8a4f10c1b2cbac6a1450b82f7991b62a5b62a31ad354ff1a68ab4",
+        "frames": 640000,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_8.wav",
+        "bytes": 1186180,
+        "sha256": "c2ccbb7ed468e90e6afce886ff1d5667c9568348b4ed54f7c20dd0e8233f046b",
+        "git_blob_sha1": "a389805586751726760e2a5072d8823b452ea1eb",
+        "pcm_sha256": "f6e6143446740182113e27e8112e55cd325ee022f0a86ced22b9b415b149a7a2",
+        "frames": 593068,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Munching_9.wav",
+        "bytes": 1794314,
+        "sha256": "9e18b0aed674c543b96b1592397dd16d28c47f3ee42e748ebc8eb56d4df3cc84",
+        "git_blob_sha1": "5ffae02c05aff4192fcb7d8755ac8be342906cf8",
+        "pcm_sha256": "a25d49d4b65b44ca1aaca729dddcf39b802bb52fa7520888dc393c48282bb2d6",
+        "frames": 897135,
+        "category": "Munching",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_1.wav",
+        "bytes": 803724,
+        "sha256": "08a9ea14ae4dd4a1e8314f4fc421841a94b20f591f67829737ea51772be59620",
+        "git_blob_sha1": "59bd28effa401bbfd36a0e043bc12c5b3e1f7c1b",
+        "pcm_sha256": "5ce838cb217f293b183c7453887eae0c4f338da88eb1b58c95be98f9d902cebc",
+        "frames": 401840,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_10.wav",
+        "bytes": 1076908,
+        "sha256": "02ee5f6cd68ddc82247800d3708fe4c0926521a4ca7ddf4157839b5fad854d69",
+        "git_blob_sha1": "4e4c581e75766ebecc7968d43c060ee9b90ce92f",
+        "pcm_sha256": "bfb1383d86901882eed5ec40875b9deb17d531cfaf9fd678d74c603164040974",
+        "frames": 538432,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_2.wav",
+        "bytes": 964780,
+        "sha256": "69aeb7ba6f6d0ad95d8b96411a7a4d08bb82d250e44f25e5e68410ac0e6363c1",
+        "git_blob_sha1": "edb2cce1814f8837de26d12ec1c870f8333895ca",
+        "pcm_sha256": "01bad3533b575bbfa66b18f3c0d1b89b9603c65b6b69b7d31cc5ee00bcc8c4f3",
+        "frames": 482368,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_3.wav",
+        "bytes": 708972,
+        "sha256": "ccdb2c88ed85587507e590499f909d3395f28401912bd379d6fb3b8e2f1e6f73",
+        "git_blob_sha1": "e10b798c76240f0b1eaa33458fb1a1904ab53775",
+        "pcm_sha256": "115d2f0c8b9e4e8147b125e964523ae1c0a4c74176eea9777bafd481a03fd092",
+        "frames": 354464,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_4.wav",
+        "bytes": 1181580,
+        "sha256": "df65bde6e6425ca7b4677f23ef7b9b70d017d561277c13a853f00408ca4f2d54",
+        "git_blob_sha1": "4577f0ce2f59030d269a011e24da37081a9a9abc",
+        "pcm_sha256": "7e2d5b5473548938db991b628db527dfec414f80fc3288c472c3f6e9184c6d1c",
+        "frames": 590768,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_5.wav",
+        "bytes": 703372,
+        "sha256": "7d9b860e877dda6fc7aea075a5e199385332d8dd35cc06715ab0139c44f9ed45",
+        "git_blob_sha1": "02b4d7541d60feb982b6771799e47d78124ecd06",
+        "pcm_sha256": "8295317e2e20ed6f3e3095abfa261ae488898edec25b8cd4c887a1553abe0095",
+        "frames": 351664,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_6.wav",
+        "bytes": 944780,
+        "sha256": "e457d3e1b58b0f2ab38bccb1b5802db5a955bd0707be58b3929d8aaf8bfbf5f2",
+        "git_blob_sha1": "789672c0e968b6e57b02dbf65a483ba5f473a469",
+        "pcm_sha256": "374d30d89feb8adead545699faca2074c9879057faa5c483eac2a64284149786",
+        "frames": 472368,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_7.wav",
+        "bytes": 1228844,
+        "sha256": "95341bfed7e7f36b56707b6831e89a5714715d13d7d9586aa8eae0fbd97ef3e3",
+        "git_blob_sha1": "096a19b63d6097ad4e50aafc7287d48b23e12896",
+        "pcm_sha256": "3d374284b933c1867e797a7d85804e10b03b7aced91cb069dcd1fbfd669edd49",
+        "frames": 614400,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_8.wav",
+        "bytes": 997932,
+        "sha256": "7610c5943a5be0453b73e1e296474fac6a6add6f25e023745002a720e8c2080f",
+        "git_blob_sha1": "d7f3cbff729da24b8d4487ff0dbe4d723485c4b7",
+        "pcm_sha256": "ee020c0eeb5a2e49deacb7fe232e4bb3d2e8c245914c6cb82c0b55229ef9fa55",
+        "frames": 498944,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/ShuttingDoor_9.wav",
+        "bytes": 683308,
+        "sha256": "6eac0e21047ded2243754eb37eaa1332fa9f9c4c134d6402d482332d216ea04e",
+        "git_blob_sha1": "9718fc5f874ba949863979ae788deb4e2d14fc7f",
+        "pcm_sha256": "05745bbdf7d8e58d9e7593201d94b06c58c3b0d8662d0970b6b2c2b52230141e",
+        "frames": 341632,
+        "category": "ShuttingDoor",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/SqueakyChair_1.wav",
+        "bytes": 1008364,
+        "sha256": "22982dc5db61920ad4be41226baf2028b5315435dfca470539325c7879c78f35",
+        "git_blob_sha1": "cc551aeb415119427387f502a4636e7a25da3acc",
+        "pcm_sha256": "871b80b2cd943fa290bbf1e31af0c5c22b45369742e9bb05148da5cc83ba29ac",
+        "frames": 504160,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_10.wav",
+        "bytes": 770996,
+        "sha256": "7c04a7f131d9ce04ea22dc96cc52d8db4e489ef1f367237cfb369e766f661ebb",
+        "git_blob_sha1": "979062e361fbd5ea00bdce1649057fef3d0ed575",
+        "pcm_sha256": "f27705fb277c462b4db15fbb3c5a13d8c26c9476dd6af069b5a66b33d7410020",
+        "frames": 385476,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_11.wav",
+        "bytes": 1100460,
+        "sha256": "489fd9543ee9aeb42ffc80f615d4a446b5d460e5b35cef9ada437650c7ab6742",
+        "git_blob_sha1": "f2c5753f1380c15d15e1cc67480584b9f2da351b",
+        "pcm_sha256": "828b24a4e1c4dedfd57af46c9a9f0c042abb8149dd76dee64d8f9d61710f5e4a",
+        "frames": 550208,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_2.wav",
+        "bytes": 1063980,
+        "sha256": "ae6c21e43e762f18f056e2c51b3358463c5bc931d7ca2bbff43df0e99aabae2f",
+        "git_blob_sha1": "e0bea159424cf4765c399072ddaa8008cdd7afaf",
+        "pcm_sha256": "87ccb8b046c4f40e66390a8d868b11f78e3d8a99b255dd520842c556f99216da",
+        "frames": 531968,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_4.wav",
+        "bytes": 1081086,
+        "sha256": "fed3cd1d3757c835f5af313ca694db9c9172a6f4eca4779e8c6459781ba7e2ac",
+        "git_blob_sha1": "b6adb8486ca90307594ea8eda9c9ededb2ad33f0",
+        "pcm_sha256": "21ada021d86ad006578dcb71dc4cd400e7323a9f53a8d9de8b647b823da242b9",
+        "frames": 540521,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_5.wav",
+        "bytes": 701036,
+        "sha256": "30112161e79fab38a0d04ca7b5f9174e8555ec7750d73eb5734f83d1e1b6c33e",
+        "git_blob_sha1": "fbf77cd0edfbe0179ef47cd1c1a46197743d88ca",
+        "pcm_sha256": "302e29e066e16f8ade4fd3ee1338edec742570f6e39fd6d0de93672337a0a027",
+        "frames": 350496,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_6.wav",
+        "bytes": 962878,
+        "sha256": "3ec169a5ab51738ba0b89bbb1e3b86a7042499a0668b6e7b7e5e7f7607d4441b",
+        "git_blob_sha1": "241e2f097fcf8b77048b513d08517f0fe976bae0",
+        "pcm_sha256": "52d8bf1b7441a825fd439273cc18bc48599600e17c63059f8976db2ecacb658c",
+        "frames": 481417,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_7.wav",
+        "bytes": 757046,
+        "sha256": "4d2b70932affcff343e926b29a5f68219c0cc047c8b97f5ffbc80051ef56c465",
+        "git_blob_sha1": "27e9ec4a069bd3699e717cb820ccceac819959e5",
+        "pcm_sha256": "fd25a3159f9807838af8b95b0cec7c4c65aedb5663b5103897eea69401f269ab",
+        "frames": 378501,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_8.wav",
+        "bytes": 1097636,
+        "sha256": "0e7afed2b22871a9e8ba6d41012266faef58cd35374e22c8210c1a1112f7cf12",
+        "git_blob_sha1": "bab14abf6d331f6d5891b2d4a2524f2ba9dedeb8",
+        "pcm_sha256": "c391dbc5aef28bf58094135bc0c4ff6ab15ca688ee5aa635245a6dbed5a03cd5",
+        "frames": 548796,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/SqueakyChair_9.wav",
+        "bytes": 851820,
+        "sha256": "e85df47518c6cc005c51423a6aa5311a69a184c0d62ac7e8872ca42405432720",
+        "git_blob_sha1": "6eb29268535422fb6a521450a9d188ef46d4df4b",
+        "pcm_sha256": "ff2ea82af288e067a969c61c8338c2ea406e7dec25788177f8709b7714d4d825",
+        "frames": 425888,
+        "category": "SqueakyChair",
+        "split": "dev"
+      },
+      {
+        "path": "noise_train/Typing_1.wav",
+        "bytes": 1207512,
+        "sha256": "daea23cf2db117ec72255b44c01d65dc04493f772d91e0f82c39075f1f896234",
+        "git_blob_sha1": "596e1878bc6ae56e054ef32a36211e39316baa46",
+        "pcm_sha256": "cb510a4063bd71f2017cefc0e898a78d2e835def2fd22f55363c5f1a7ef48773",
+        "frames": 603734,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_10.wav",
+        "bytes": 1197092,
+        "sha256": "93251afad811080b22cc93fd12ca4b9ca056d466a1f50daf7699f05b0f4d17d9",
+        "git_blob_sha1": "9efa1420c45213437d73e558deb0cc60edc00533",
+        "pcm_sha256": "2140afda4b5228816b12ff6612cafa8b00eea4fe254c5ff5ba669d60cdacddd2",
+        "frames": 598524,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_2.wav",
+        "bytes": 1209036,
+        "sha256": "595dff1159597a837dc5562926316119d5fbf55ee3c2ea7661506d6e34c717e0",
+        "git_blob_sha1": "e4bc0274ee9758da51c04984fae0980b877d6118",
+        "pcm_sha256": "12ac4e2b36b9079fb6d0a016096c12a3c9d6369dd10da478efa057dc8a11a804",
+        "frames": 604496,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_3.wav",
+        "bytes": 1377344,
+        "sha256": "76dd44e770c00a05cd7cc589f5c3cbf6c8cd9a7bf68efb9c9c8016d4dfac0a54",
+        "git_blob_sha1": "1b3020b977241a236a5b6963e922e17212d7589f",
+        "pcm_sha256": "2c17e9ef4cfd6e98e3d8386f97a636fe377a10bee791727825dc39638c82afba",
+        "frames": 688650,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_4.wav",
+        "bytes": 871400,
+        "sha256": "6e031d6b3518a4aed281505c5cdc08de1902c5b61c8353f3c2e911f1dd9bcc88",
+        "git_blob_sha1": "66a3da19f30118439b4067119b019034fdfe3bf5",
+        "pcm_sha256": "9b44596a43223c4ea2c04c455914c7f72c8816330caf44e9a1492c3677bd8043",
+        "frames": 435678,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_5.wav",
+        "bytes": 1080108,
+        "sha256": "5dfe18bb4a298482064d393b718fc58c288218748d25c623205bdbaebf4a90fa",
+        "git_blob_sha1": "fd7649fdc41024aacd113e8762f6f39eeb6719b9",
+        "pcm_sha256": "18fb849a00443a89998a595618e81552fa80153bcf403865a243cff2a1f26a9f",
+        "frames": 540032,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_6.wav",
+        "bytes": 710854,
+        "sha256": "91389a01060795dfddbcc5f46e6e998241b877a730d334b1e5939c799659dee2",
+        "git_blob_sha1": "3ed7479380f63165f5f6c440babfa756a5bd8c2c",
+        "pcm_sha256": "06926d06a8ffceba109d4902dce9b1c72f239976cbfb9677e2834c13f5aae746",
+        "frames": 355405,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_7.wav",
+        "bytes": 1519434,
+        "sha256": "083a045a3bee99a8d5d9935c1117922be27fdcabae1e2459d3c68398ffccfe45",
+        "git_blob_sha1": "00cd03bddf0e7801e6b00ecf60212c397c4116a0",
+        "pcm_sha256": "1c07d589a38c1254a244ed9e50ac9cbf319b0f99e4b701585b3063de32f13d1b",
+        "frames": 759695,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_8.wav",
+        "bytes": 5708610,
+        "sha256": "755070b0fa62ace91f591e986d1411e06248cd0bef0f9e05f23492e8c4bf3c09",
+        "git_blob_sha1": "a42c9f5b2bbbf4b33b0b4a0427ae79c207c914f3",
+        "pcm_sha256": "b06ed4b88e3e4c0f26dac79cb40672bcbd003097803a7880d41bf9390ab73365",
+        "frames": 2854283,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Typing_9.wav",
+        "bytes": 1338332,
+        "sha256": "994612490c7b4b16262d5bae87ddde1212c22ec032a6073d7b27ae2b5a1ecdd1",
+        "git_blob_sha1": "c7da4bb17909c814527c81c9e886c7db5a8bb26e",
+        "pcm_sha256": "edf60e9da33782ff12d704f8087949fa63411e2684968c3594d89384991a3d0d",
+        "frames": 669144,
+        "category": "Typing",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_1.wav",
+        "bytes": 1246888,
+        "sha256": "ab1651d17ceba8d3c8d7e0c784b1173c4cf626eab1a5d0b257adc8c690eb551e",
+        "git_blob_sha1": "023e0a4b286e41e3e39a30e3025953a4d2f774e1",
+        "pcm_sha256": "d6056ed318f6064332ae58f66438480941cf097e9f204d17627a808d8c34f3ee",
+        "frames": 623422,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_2.wav",
+        "bytes": 1506880,
+        "sha256": "8f8e90c964c9a62acb53ba69592ac9acc315b784476656764358948dfa5c35dd",
+        "git_blob_sha1": "082151ed5e469e42d5e8dc1bd6255aaf9632b505",
+        "pcm_sha256": "e108bd9515e33539f1180f9c3e530eb1aa175182b438bd8fa0899ed88712a06f",
+        "frames": 753418,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_3.wav",
+        "bytes": 1219268,
+        "sha256": "eb2b03a6568437b15ec781f89b3ba337b5e3ff1c40e9a7458d6ce45cc8be4079",
+        "git_blob_sha1": "75aaa108a6aa3c225bdbf7313306de299d8c89c8",
+        "pcm_sha256": "ca131a01100d42494ef12e0a145a333c2d575b9aae8669b3b1e5352bfe4b268b",
+        "frames": 609612,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_4.wav",
+        "bytes": 667608,
+        "sha256": "9612cb06e9d9714d57e77f5c05d6c65b3d4ec29960d7c74cfda72299696a117f",
+        "git_blob_sha1": "9cf2e1cc5747ca79dcf7eb9dffeab30f323d2243",
+        "pcm_sha256": "2031f4a06c85b4d8bc5835277ff7decbd0221e02d5cab63d77f4969813c4f3c4",
+        "frames": 333782,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_5.wav",
+        "bytes": 1326720,
+        "sha256": "7c181d86ffa4090311ae50620ab1e93262605cbac45033011bcac43b3f8b2a21",
+        "git_blob_sha1": "bb7bb76e7f956dd114834cf57784e18bc06cb9ae",
+        "pcm_sha256": "ff0c2d54169de83ba0f5a3e192379cf76682e3823ddae7ddf03a5928193dc5ed",
+        "frames": 663338,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_6.wav",
+        "bytes": 891600,
+        "sha256": "2b2276c9fa5c0150f909a7b3210476eb65fc7d2d9a8f458d9e8b54952f2475ef",
+        "git_blob_sha1": "e9fe7820c5b2608dd6089da0e1a96444d46b0ce8",
+        "pcm_sha256": "e002cfbd7743979744866540ac6424d24c3bccb04088b60a5885af384e183292",
+        "frames": 445778,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_7.wav",
+        "bytes": 1509164,
+        "sha256": "8292fb3c3c869da931cf6929a9ba20c23895e8ad59b628a47ed2a0eb022799b0",
+        "git_blob_sha1": "39e357d858da0b9e71290a7246ccfa1657732962",
+        "pcm_sha256": "12699d74f8d01e60f578a678a1613af68bb56509dc9fc4558052bf4e1af75620",
+        "frames": 754560,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_8.wav",
+        "bytes": 4242136,
+        "sha256": "b2e59aacc3f378fb086743406607ae82a062368a3e31f68f9bea932abf2776fc",
+        "git_blob_sha1": "69ba3441acb72d669a8e789b0309abce28242d49",
+        "pcm_sha256": "e59127e183b46443543d01dce5427d4fa6e8a9f396953e43a47a96bf48413068",
+        "frames": 2121046,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/VacuumCleaner_9.wav",
+        "bytes": 1863338,
+        "sha256": "652b7af160c7430fa88ad669be0a57e598a3798a88a9121c9943d0f839ce44fe",
+        "git_blob_sha1": "6dd42d52fc0547c341b9b81ac823cc8731122893",
+        "pcm_sha256": "f4e777b8707c20069215f58287522072f94d18061f7e40c8ddea7d49612a450d",
+        "frames": 931647,
+        "category": "VacuumCleaner",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_1.wav",
+        "bytes": 920164,
+        "sha256": "0c9db89b6b45e75bf09a057206da7a80c9ad59d0d233d82602e496cc9e26d5dc",
+        "git_blob_sha1": "62b591503f2981aa4fdb54c9ff27642b526f35fd",
+        "pcm_sha256": "73a83cdc9d4eb6e3a0a088db55e71065b17111792e25f08620d4f21da14e949f",
+        "frames": 460060,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_2.wav",
+        "bytes": 8573442,
+        "sha256": "aa3ffad2e049049b3b377fae1679d3c2f7cd41d3666700ab16b63ee86aaf7be7",
+        "git_blob_sha1": "29a1dfbf09ecb6d824a224c6ab1d94b04f8a54b1",
+        "pcm_sha256": "622989858cdfc05887e8ca30d893f8a4eca891e9d843a3bf2aeaefd84102d2f1",
+        "frames": 4286699,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_3.wav",
+        "bytes": 4569584,
+        "sha256": "41816d7e3d4fefd105f339a4a7213b966a54423ec0012b40410f17c1c9cc5890",
+        "git_blob_sha1": "1fd3fb818f1de50b905da020eb9922444e562033",
+        "pcm_sha256": "0f59e98db423d88da8e60ae9f851ea111ef8f11d6e3c78f905113acb63fcdba9",
+        "frames": 2284770,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_4.wav",
+        "bytes": 14706858,
+        "sha256": "72c739852fcf885d2043a0aecccb02cae5cd0a8a434ab58f7d91562a86cc7dd5",
+        "git_blob_sha1": "b739a0dbde676d3bf43753391ceff88a8794fda0",
+        "pcm_sha256": "d5077a429f0335cff8cf627e272d2f7d2f2242676a8d69d4228d91b2b7fd6b51",
+        "frames": 7353407,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_5.wav",
+        "bytes": 707088,
+        "sha256": "acdabcb939a121fd6e50da9aedd70484a471a692a9ead8d59def97996c97e92f",
+        "git_blob_sha1": "75026de12b059ec5079da75f037b729f72bc2d5e",
+        "pcm_sha256": "d3939d30c7199c92660402452824597a8ba410cf4921588d2fb1b9ca803e10d7",
+        "frames": 353522,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_6.wav",
+        "bytes": 3011564,
+        "sha256": "41681bda5aa0b404fb617a1a614e231b9ac24e03bf965bc2c45491ec8b10b5cd",
+        "git_blob_sha1": "0a75aef218e989fe24299ea2b8e63d81de12b84b",
+        "pcm_sha256": "a502a8305e6eb8b1c097496065cf795b12a21098646086cc9b8b9f608dcd8586",
+        "frames": 1505760,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/WasherDryer_7.wav",
+        "bytes": 2144044,
+        "sha256": "1bfca77685c232f512427437f393e9ecd0bf46f0a7987bb8f8f368af6fded7a2",
+        "git_blob_sha1": "2fbbbe7d7dc9203c5f512ff3b6224ebe21db6634",
+        "pcm_sha256": "f9c69f024eefbf5d9667fafc7164ce63e8ad785a31e363729b9c8d0110a8cf1b",
+        "frames": 1072000,
+        "category": "WasherDryer",
+        "split": "train"
+      },
+      {
+        "path": "noise_train/Washing_1.wav",
+        "bytes": 9600172,
+        "sha256": "01f64488402440551c05ded060ea6aecdf52d3d27e657b288763d135690f0a44",
+        "git_blob_sha1": "550b5edfc0419c8781ca472712796fa25c672aeb",
+        "pcm_sha256": "819118c9d95e926ee4882e0dde6155726c4a25d0022790d6bbba19fba0bf870a",
+        "frames": 4800064,
+        "category": "Washing",
+        "split": "train"
+      }
+    ],
+    "license": "Freesound CC0 / DEMAND CC BY-SA 3.0 as documented by authors; retain upstream attribution",
+    "selection": "All files from seven named non-speech training categories and two held-out categories. Both members of every decoded-PCM duplicate excluded; category labels are not perceptual certification.",
+    "quarantined": [
+      {
+        "path": "noise_train/AirConditioner_2.wav",
+        "bytes": 1223564,
+        "sha256": "21e40b21c5e15df384209e22a85eac27f0c8b1d706f07330a145173056a57de2",
+        "git_blob_sha1": "0dd5afe201dfd333077649af4c5f24f104dc49a2",
+        "pcm_sha256": "28932133eacb4f735e1f15084db3de7973523a5d2b0774c33935bd6e52e8bd9a",
+        "frames": 611760,
+        "category": "AirConditioner",
+        "split": "train",
+        "unusable": false
+      },
+      {
+        "path": "noise_train/SqueakyChair_3.wav",
+        "bytes": 1223564,
+        "sha256": "21e40b21c5e15df384209e22a85eac27f0c8b1d706f07330a145173056a57de2",
+        "git_blob_sha1": "0dd5afe201dfd333077649af4c5f24f104dc49a2",
+        "pcm_sha256": "28932133eacb4f735e1f15084db3de7973523a5d2b0774c33935bd6e52e8bd9a",
+        "frames": 611760,
+        "category": "SqueakyChair",
+        "split": "dev",
+        "unusable": false
+      }
+    ],
+    "uniqueness_review": "Git blob, encoded SHA256, decoded PCM SHA256 and exact format verified locally."
+  },
+  "license_records": [
+    {
+      "file": "MS_SNSD_README.md",
+      "sha256": "668f222a866df787313c2825d4f16b6d8ee2b8ab9152cb428731e69ae28326fa"
+    },
+    {
+      "file": "MS_SNSD_CODE_LICENSE",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b"
+    }
+  ],
+  "split_policy": "Held-out Rasa language groups and disjoint MS-SNSD categories before cropping/mixing. No explicit speaker IDs: true person-disjointness across languages is not established."
+}

@@ -1,0 +1,8 @@
+si_sdr: 14.417813
+delta_wer: 2.813475
+delta_wer_synthetic: 8.323597
+delta_wer_raw: 0.216354
+combined_score: 17.231287
+audit_pass: 1
+audit_mismatch: 0.000000
+Duration: 938.17

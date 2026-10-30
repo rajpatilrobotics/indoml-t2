@@ -1,0 +1,10 @@
+# Third-party attribution
+
+- **GAP-URGENet**: Xiaobin Rong and collaborators, https://github.com/Xiaobin-Rong/gap-urgenet and https://huggingface.co/Xiaobin-Rong/gap-urgenet. Pretrained Predictor revision `f1916ff86b83777e2c3e7ecae8752a04b8d88d41`. MIT license in `licenses/GAP_MIT.txt`. The released checkpoint is an adaptation of this Predictor, not a model trained from scratch.
+- **TFGridNet / ESPnet**: the vendored network is an adaptation of ESPnet TFGridNetV3. Original copyright and Apache-2.0 license are retained in the source and `licenses/ESPnet_Apache2.txt`. Architectural attribution: Zhong-Qiu Wang et al., TF-GridNet (2023).
+- **SraVaani-1.0**, ARTPARK-IISc: https://huggingface.co/ARTPARK-IISc/SraVaani-1.0, revision `f5dd5358325a5208775b91dad98918e079ea2b27`. Gated, MIT-tagged model; download from the provider after accepting its access conditions. No recognizer weights are distributed here. Its model source and weights are unchanged for submission transcription.
+- **Rasa**, AI4Bharat: https://huggingface.co/datasets/ai4bharat/Rasa, revision `632f55c7ac590219d41cd7adffce5b440e4604f5`, CC BY 4.0. External clean speech was resampled, filtered, cropped and mixed with noise for enhancement training. No source audio or transcripts are redistributed.
+- **MS-SNSD**, Microsoft: https://github.com/microsoft/MS-SNSD, revision `fe61c4ba0d9ac8dd7e23d719cc79f8947e1dc742`. Source README and code license are preserved with the data pins. Dataset recording terms remain the upstream terms; the code license is not represented as blanket licensing of every audio recording.
+- **PCGrad** inspiration: Tianhe Yu et al., “Gradient Surgery for Multi-Task Learning,” NeurIPS 2020, https://arxiv.org/abs/2001.06782. The one-sided projection/norm cap is an adaptation, not a claim of inventing gradient conflict projection.
+
+Original project glue code is provided for evaluation and reproduction. No blanket relicensing of upstream components or datasets is asserted. The final adapted Predictor retains its upstream MIT terms; the network implementation retains the ESPnet Apache-2.0 notices.

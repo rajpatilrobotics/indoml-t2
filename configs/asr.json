@@ -1,0 +1,15 @@
+{
+  "asr_repo": "ARTPARK-IISc/SraVaani-1.0",
+  "asr_revision": "f5dd5358325a5208775b91dad98918e079ea2b27",
+  "artifact_sha256": {
+    "config.json": "c794c314a7f82ee5b156f47ed35ccbbaed03fd8378ce1718b038300bd0eb325a",
+    "configuration_sravaani.py": "d3ff324a779d9b5b916e9f4367b783ca2fab0ca3f82ef932eb956324b3e285fd",
+    "example_inference.py": "f28a742e1179a06a5cf8eba2f7b1a1b247a257ef9d32c0ccdc01a502f736da8a",
+    "model-asr.fp16.ts": "789a21b6df8b0bb2ea2cc1c120edbfd4b898d3a26e6c6673cca45d14b64a47f2",
+    "model_meta.json": "b3e7134ae4cb324f555f3a97d171fc0c0b25a7e102f8757a599f6025a3e94105",
+    "modeling_sravaani.py": "1c9335a761ce890b43bd7b116a82caad703abcccd147fca812f1c9b7a936ccc8",
+    "preproc.pt": "8119ff424215f42c11eaf4e745c12bbe3076d5a037593ab523c1f15ef32f5b2f",
+    "processing_sravaani.py": "2d6a08ca5a5bf97242e0abefa4f42a17d3cc492311600cce81df08b42970bfad",
+    "tokenizer.model": "0af4086ec53482ac0cef0375369cf4ce7bafaf8b0a7203e97d126d0599ab90a6"
+  }
+}

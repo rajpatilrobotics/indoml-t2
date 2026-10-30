@@ -1,0 +1,21 @@
+{
+  "team": "Innovators",
+  "participant": "Raj Patil",
+  "track": "Track-2: Removal",
+  "candidate": "GAPPolar90",
+  "codabench_submission_id": 982179,
+  "rank_observed_2026_10_30": 7,
+  "combined": 17.231287,
+  "si_sdr_db": 14.417813,
+  "delta_wer_pp": 2.813475,
+  "synthetic_delta_wer_pp": 8.323597,
+  "natural_delta_wer_pp": 0.216354,
+  "asr_audit": "PASS",
+  "audit_clips": 100,
+  "audit_mismatch_fraction": 0.0,
+  "wav_count": 3178,
+  "transcript_count": 3178,
+  "prediction_zip_sha256": "968bb55046e91f7e3ea1d2f285cd86a428472f8a72b5ff782d3825d763f4433d",
+  "checkpoint_sha256": "4629c2d75492644265c42cc93780770039d562cc9288fb1ee15520e0ceaca825",
+  "source": "Official Codabench scoring output; leaderboard rank observed 30 October 2026. Hidden metrics were not independently recomputed."
+}
